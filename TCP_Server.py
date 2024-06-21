@@ -18,7 +18,7 @@ def connect():
             continue
         else:
             conn.send(command.encode())  # if the connection work send the command
-            response = conn.recv(4096).decode()  # print the result that we got back
+            response = conn.recv(1024).decode()  # print the result that we got back
             print(response)
 
 def main():
